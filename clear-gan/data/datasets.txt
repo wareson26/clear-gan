@@ -1,0 +1,60 @@
+---
+**CLEAR-GAN: Locality-aware Hybrid Resampling for Ordinal Multiclass Imbalance with Class Overlap**
+
+## Proprietary dataset
+
+In addition to the public datasets, the manuscript evaluates CLEAR-GAN using a proprietary student dataset collected at a public university in Ghana.
+
+### Dataset description
+The proprietary dataset consists of anonymised academic records of undergraduate students tracked over multiple academic periods.
+Each instance represents a student trajectory, with features capturing cumulative academic performance, progression indicators, and engagement-related attributes measured across successive semesters. The target variable is an ordinal academic outcome label reflecting overall performance status.
+
+The dataset exhibits substantial class imbalance and pronounced overlap between adjacent performance categories, making it representative of real-world ordinal classification challenges in educational settings.
+
+### Metadata summary
+- Domain: Higher education  
+- Task: Ordinal multiclass classification  
+- Structure: temporal (multiple academic periods per student)  
+- Features: The dataset includes demographic attributes (Gender, Age, Region), academic background indicators (Grade, Programme, Exams_attempt, Is_Choice, Bursary), semester-level performance measures (Semester_1 to Semester_8), and an aggregated final performance indicator (FGPA). The prediction target is an ordinal academic outcome class.
+- Target variable: Ordinal academic performance category  
+- Class distribution: Imbalanced with overlapping adjacent classes  
+- Data type: Tabular, numeric, and categorical (encoded)
+
+### Availability
+Due to privacy and ethical considerations, the proprietary dataset is not publicly available and cannot be redistributed.  
+An anonymised version of the dataset may be made available upon reasonable request from the corresponding author.
+
+
+
+
+All public datasets used in this study are publicly available.  
+No dataset files are committed to this repository.  
+Instead, notebooks download the data directly from the original sources to ensure licensing compliance and reproducibility.
+
+
+## Dataset overview (Table 3 in the manuscript)
+
+| ID    | Dataset name                     | Source   | Instances | Features | Classes | Ordinal |
+|------:|----------------------------------|----------|-----------|----------|---------|---------|
+| Stud1 | Students Performance             | OpenML  | 2,392     | 14       | 5       | Yes     |
+| Stud2 | Student Performance (Portuguese) | Kaggle  | 649       | 33       | 4       | Yes     |
+| Stud3 | Student Academic Success         | UCI     | 4,424     | 36       | 3       | Yes     |
+| Win   | Wine Quality (White)             | UCI     | 4,894     | 11       | 6       | Yes     |
+| Stud4 | Student Dropout                  | UCI     | 649       | 33       | 2       | Yes     |
+
+Dataset statistics reflect the pre-processing steps described in the manuscript and may differ slightly from raw repository counts.
+
+---
+
+## Data sources
+
+- **OpenML**  
+Stud1: https://www.openml.org/search?type=data\&status=active\&id=46255
+
+- **UCI Machine Learning Repository**  
+Stud3: https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success
+Stud4: https://archive.ics.uci.edu/dataset/320/student+performance
+Win: https://archive.ics.uci.edu/dataset/186/wine+quality
+
+- **Kaggle Datasets**  
+Stud2: https://www.kaggle.com/datasets/larsen0966/student-performance-data-set
